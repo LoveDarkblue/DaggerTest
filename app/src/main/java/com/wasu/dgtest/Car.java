@@ -1,5 +1,7 @@
 package com.wasu.dgtest;
 
+import com.wasu.dgtest.inter.BlackShell;
+
 import javax.inject.Inject;
 import javax.inject.Named;
 
@@ -9,11 +11,13 @@ import javax.inject.Named;
 public class Car {
     Tire tire;
     IEngin engin;
+    Shell shell;
 
     @Inject
-    public Car(Tire tire, @Named("BEngin") IEngin engin) {
+    public Car(Tire tire, @Named("BEngin") IEngin engin,@BlackShell Shell shell) {
         this.tire = tire;
         this.engin = engin;
+        this.shell = shell;
     }
 
     public String getStr() {

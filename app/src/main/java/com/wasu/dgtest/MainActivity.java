@@ -18,5 +18,6 @@ public class MainActivity extends AppCompatActivity {
         DaggerMainActivityComponent.create().inject(this);
         Log.i("TAG", car.getStr() + " has " + car.tire.getStr() + ", it uses the " + car.engin.name());
         car.engin.start();
+        car.shell.showColor();
     }
 }
