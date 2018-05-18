@@ -1,6 +1,6 @@
 package com.wasu.dgtest;
 
-import com.wasu.dgtest.inter.BlackShell;
+import com.wasu.dgtest.inter.ColorShell;
 
 import javax.inject.Inject;
 import javax.inject.Named;
@@ -14,7 +14,7 @@ public class Car {
     Shell shell;
 
     @Inject
-    public Car(Tire tire, @Named("BEngin") IEngin engin,@BlackShell Shell shell) {
+    public Car(Tire tire, @Named("BEngin") IEngin engin, @ColorShell("red") Shell shell) {
         this.tire = tire;
         this.engin = engin;
         this.shell = shell;
